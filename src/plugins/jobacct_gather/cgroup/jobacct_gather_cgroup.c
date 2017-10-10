@@ -138,7 +138,7 @@ static void _prec_extra(jag_prec_t *prec)
 		sscanf(ptr, "total_rss %lu", &total_rss);
 		prec->rss = total_rss / 1024; /* convert from bytes to KB */
         
-        //NISHTALA: PRINT prec->rss 
+        //NISHTALA: PRINT prec->rss also get page fault
         debug2("%lu", prec->rss)
 		/* total_pgmajfault is what is reported in proc, so we use
 		 * the same thing here. */
