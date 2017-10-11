@@ -105,7 +105,7 @@ jobacct_gather_cgroup_memory_fini(slurm_cgroup_conf_t *slurm_cgroup_conf)
 	 */
 	if (xcgroup_create(&memory_ns, &memory_cg, "", 0, 0) == XCGROUP_SUCCESS) {
         //nishtala: get pid
-        debug2("%d", getpid())
+        debug2("%d", getpid());
 		xcgroup_set_uint32_param(&memory_cg, "tasks", getpid());
 		xcgroup_set_param(&step_memory_cg, "memory.force_empty", "1");
 	}

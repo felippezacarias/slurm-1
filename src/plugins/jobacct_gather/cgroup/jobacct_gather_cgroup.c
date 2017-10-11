@@ -139,7 +139,7 @@ static void _prec_extra(jag_prec_t *prec)
 		prec->rss = total_rss / 1024; /* convert from bytes to KB */
         
         //NISHTALA: PRINT prec->rss also get page fault
-        debug2("%lu", prec->rss)
+        debug2("%lu", prec->rss);
 		/* total_pgmajfault is what is reported in proc, so we use
 		 * the same thing here. */
 		if ((ptr = strstr(memory_stat, "total_pgmajfault"))) {
